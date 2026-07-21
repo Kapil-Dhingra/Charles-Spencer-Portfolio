@@ -8,6 +8,12 @@ GOOGLE FONT
     box-sizing:border-box;
 }
 
+html,
+body{
+    overflow-x:hidden;
+    width:100%;
+}
+
 html{
     scroll-behavior:smooth;
 }
@@ -95,9 +101,16 @@ section{
     padding:100px 0;
 }
 
-.container{
+/* .container{
     width:min(1180px,92%);
     margin:auto;
+} */
+
+.container{
+    width:100%;
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 20px;
 }
 
 .section-title{
@@ -1142,7 +1155,7 @@ section{
 
 }
 
-.nav{
+/* .nav{
 
     position:fixed;
 
@@ -1174,6 +1187,28 @@ section{
 
     right:0;
 
+} */
+
+.nav{
+    position:fixed;
+    top:78px;
+    right:0;
+    width:270px;
+    max-width:80vw;
+    height:calc(100vh - 78px);
+    background:var(--card);
+    display:flex;
+    flex-direction:column;
+    padding:40px 30px;
+    gap:25px;
+    box-shadow:var(--shadow);
+
+    transform:translateX(100%);
+    transition:transform .35s ease;
+}
+
+.nav.active{
+    transform:translateX(0);
 }
 
 #menuBtn{
