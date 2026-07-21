@@ -133,7 +133,7 @@ window.addEventListener("scroll", () => {
 
 const header = document.querySelector(".header");
 
-window.addEventListener("scroll", () => {
+/*window.addEventListener("scroll", () => {
 
     if (window.scrollY > 40) {
 
@@ -145,6 +145,24 @@ window.addEventListener("scroll", () => {
         header.style.boxShadow = "none";
 
     }
+
+});*/
+
+window.addEventListener("scroll",()=>{
+
+header.style.backdropFilter="blur(18px)";
+
+header.style.background=window.scrollY>40
+?"rgba(255,255,255,.78)"
+:"rgba(255,255,255,.65)";
+
+if(body.classList.contains("dark")){
+
+header.style.background=window.scrollY>40
+?"rgba(8,17,31,.88)"
+:"rgba(8,17,31,.75)";
+
+}
 
 });
 
